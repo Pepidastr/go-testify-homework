@@ -35,8 +35,8 @@ func TestMainHandWrongCity(t *testing.T) {
 
 	status := responseRecorder.Code
 	expected := `wrong city value`
-	require.Equal(t, status, http.StatusBadRequest)
-	require.Equal(t, responseRecorder.Body.String(), expected)
+	assert.Equal(t, status, http.StatusBadRequest)
+	assert.Equal(t, responseRecorder.Body.String(), expected)
 
 }
 
